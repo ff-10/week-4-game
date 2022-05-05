@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- reset.css -->
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <!-- style.css -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/png">
+
+    <title>Crystal Game</title>
+</head>
+
+<body>
+
+    <button id="howToPlayBtn" onclick="$('.howToPlayContent').fadeIn(500);">
+        How To Play ?
+    </button>
+    <div class="howToPlayContent">
+        <div onclick="$('.howToPlayContent').fadeOut(500);">&times;</div>
+        Rules
+        <hr>
+        1. The computer selects a random crystal value between 19-120
+        <br />
+        2. You have 4 randomly valuable crystals between 1-12
+        <br />
+        3. Try to collect the number of target crystals.
+        <br />
+        4. Good Luck 💎
+    </div>
+
+    <div class="container">
+        <div class="gameLogo">💎 Crystal Game 💎</div>
+        <hr>
+        <div class="gameInfoArea">
+            <div>
+                <div class="softBox winsDiv">
+                    Wins: <span id="wins">0</span>
+                </div>
+                <div class="softBox lossesDiv">
+                    Losses: <span id="losses">0</span>
+                </div>
+            </div>
+            <div class="roundStatus softBox">
+                You lose!
+            </div>
+            <div class="scoresArea">
+                <div class="softBox">
+                    Target Crystals: <span id="target"></span>
+                </div>
+                <div class="softBox">
+                    Collected Crystals: <span id="collected">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="gems">
+            <button class="gem gem2" value=""></button>
+            <button class="gem gem4" value=""></button>
+            <button class="gem gem3" value=""></button>
+            <button class="gem gem1" value=""></button>
+        </div>
+        <hr>
+    </div>
+
+    <!-- jQuery 3.6.0 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- game.js -->
+    <script src="./assets/javascript/game.js"></script>
+</body>
+
+</html>
